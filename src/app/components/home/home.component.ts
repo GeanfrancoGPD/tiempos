@@ -1,11 +1,24 @@
 import { Component } from '@angular/core';
+import { TimeComponent } from '../time/time.component';
+import { RelojArenaComponent } from '../relojes/reloj-arena/reloj-arena.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RelojDigitalComponent } from '../relojes/reloj-digital/reloj-digital.component';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [TimeComponent, RelojArenaComponent, FormsModule, CommonModule,
+    RelojDigitalComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  hora: Date = new Date();
+  seleccion = '1';
 
+  actualizarHora(horaRecibida: Date) {
+    this.hora = horaRecibida;
+  }
 }

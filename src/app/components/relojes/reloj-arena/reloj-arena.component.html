@@ -1,0 +1,9 @@
+<div class="reloj-arena-container">
+  <div class="arena" *ngFor="let unidad of unidades">
+    <div class="glass">
+      <div class="sand top" [ngStyle]="getTopStyle(unidad)"></div>
+      <div class="sand bottom" [ngStyle]="getBottomStyle(unidad)"></div>
+    </div>
+    <div class="label">{{ unidad.label }}</div>
+  </div>
+</div>

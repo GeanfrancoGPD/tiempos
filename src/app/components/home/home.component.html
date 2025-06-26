@@ -1,1 +1,19 @@
 <p>home works!</p>
+<div class="home-container">
+    <form action="#">
+        <label for="comp">Selecciona un componente</label>
+        <select name="selector" [(ngModel)]="seleccion" id="comp" >
+            <option value="1">Reloj de arena</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+
+        </select>
+    </form>
+
+    <app-time (horaActual)="actualizarHora($event)"></app-time>
+    
+    <app-reloj-arena *ngIf="seleccion === '1'" [hora]="hora"></app-reloj-arena>
+    <app-reloj-Digital *ngIf="seleccion === '2'" [hora]="hora"></app-reloj-Digital>
+    
+
+</div>
