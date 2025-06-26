@@ -1,0 +1,26 @@
+<div class="reloj-velas">
+  <div class="vela-container">
+    <div class="vela horas" [style.height]="alturaHoras + 'px'">
+        <div class="llama"></div>
+        <div class="gota"></div>
+        <p>{{ hora.getHours() }}</p>
+    </div>
+    <span>Horas</span>
+  </div>
+  <div class="vela-container">
+    <div class="vela minutos" [style.height]="alturaMinutos + 'px'">
+        <div class="llama"></div>
+        <div class="gota"></div>
+        <p>{{ hora.getMinutes() }}</p>
+    </div>
+    <span>Minutos</span>
+  </div>
+  <div class="vela-container">
+    <div class="vela segundos" [style.height]="alturaSegundos + 'px'">
+        <div class="llama"></div>
+        <div class="gota"></div>
+        <p>{{ hora.getSeconds() }}</p>
+    </div>
+    <span>Segundos</span>
+  </div>
+</div>

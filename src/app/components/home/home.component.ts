@@ -5,12 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RelojDigitalComponent } from '../relojes/reloj-digital/reloj-digital.component';
 import { RelojAnalogicoComponent } from "../relojes/reloj-analogico/reloj-analogico.component";
+import { RelojVelaComponent } from "../relojes/reloj-vela/reloj-vela.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [TimeComponent, RelojArenaComponent, FormsModule, CommonModule,
-    RelojDigitalComponent, RelojAnalogicoComponent],
+    RelojDigitalComponent, RelojAnalogicoComponent, RelojVelaComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

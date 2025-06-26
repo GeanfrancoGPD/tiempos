@@ -1,0 +1,127 @@
+.reloj-velas {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  margin: auto;
+  align-items: flex-end;
+  height: 200px;
+  border: 2px solid #333;
+  padding: 20px;
+  background: #fffbe6;
+}
+
+.vela-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  position: relative;
+}
+
+.vela {
+  width: 30px;
+  border-radius: 6px 6px 0 0;
+  box-shadow: inset 0 2px 5px rgba(255,255,255,0.7);
+  transition: height 0.5s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+  min-height: 5px;
+}
+
+.vela p {
+  color: rgb(29, 27, 27);
+  font-size: 0.8em;
+  margin: 0 0 4px 0;
+}
+
+/* Colores de velas */
+.horas {
+  background: linear-gradient(to top, #a0522d, #8b4513);
+}
+
+.minutos {
+  background: linear-gradient(to top, #deb887, #d2b48c);
+}
+
+.segundos {
+  background: linear-gradient(to top, #ffcc00, #ff9900);
+}
+
+span {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #5a3e1b;
+}
+
+/* GOTAS DE CERA */
+.gota {
+  position: absolute;
+  bottom: -10px;
+  width: 8px;
+  height: 8px;
+  background: #e5a541;
+  border-radius: 50%;
+  animation: goteo 2s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+.horas .gota {
+  background: #8b4513;
+}
+.minutos .gota {
+  background: #d2b48c;
+}
+.segundos .gota {
+  background: #ff9900;
+}
+
+@keyframes goteo {
+  0% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(15px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+
+.llama {
+  position: absolute;
+  top: -20px;
+  width: 12px;
+  height: 20px;
+  background: radial-gradient(ellipse at center, #ff0 0%, #f00 70%, transparent 80%);
+  border-radius: 50% 50% 50% 50%;
+  animation: titilar 0.4s infinite ease-in-out;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+/* Posicionar la llama centrada en la vela */
+.vela {
+  position: relative;
+}
+
+/* Animación de titilar fuego */
+@keyframes titilar {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1) translateY(-2px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}

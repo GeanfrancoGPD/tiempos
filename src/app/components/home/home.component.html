@@ -4,8 +4,12 @@
         <label for="comp">Selecciona un componente</label>
         <select name="selector" [(ngModel)]="seleccion" id="comp" >
             <option value="1">Reloj de arena</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+            <option value="2">Reloj Digital</option>
+            <option value="3">Reloj Analogico</option>
+            <option value="4">Reloj de velas</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option></option>
 
         </select>
     </form>
@@ -15,6 +19,6 @@
     <app-reloj-arena *ngIf="seleccion === '1'" [hora]="hora"></app-reloj-arena>
     <app-reloj-Digital *ngIf="seleccion === '2'" [hora]="hora"></app-reloj-Digital>
     <app-reloj-analogico *ngIf="seleccion === '3'" [hora]="hora"></app-reloj-analogico>
+    <app-reloj-vela *ngIf="seleccion === '4'" [hora]="hora"></app-reloj-vela>
     
-
 </div>
