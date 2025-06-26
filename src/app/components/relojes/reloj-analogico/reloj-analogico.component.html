@@ -1,0 +1,16 @@
+<div class="reloj">
+  <!-- Números del reloj -->
+  <div *ngFor="let numero of numeros" 
+       class="numero" 
+       [ngStyle]="getEstiloNumero(numero)">
+    {{ numero }}
+  </div>
+
+  <!-- Manecillas -->
+  <div class="manecilla hora" [ngStyle]="{ transform: rotacionHora }"></div>
+  <div class="manecilla minuto" [ngStyle]="{ transform: rotacionMinuto }"></div>
+  <div class="manecilla segundo" [ngStyle]="{ transform: rotacionSegundo }"></div>
+
+  <!-- Centro del reloj -->
+  <div class="centro"></div>
+</div>

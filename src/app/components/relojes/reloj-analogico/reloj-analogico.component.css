@@ -1,0 +1,57 @@
+.reloj {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 8px solid black;
+  border-radius: 50%;
+  margin: auto;
+  background: white;
+}
+
+.numero {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+}
+
+.manecilla {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  background: black;
+  border-radius: 2px;
+}
+
+.hora {
+  width: 6px;
+  height: 50px;
+  background: #333;
+}
+
+.minuto {
+  width: 4px;
+  height: 70px;
+  background: #666;
+}
+
+.segundo {
+  width: 2px;
+  height: 90px;
+  background: red;
+}
+
+.centro {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

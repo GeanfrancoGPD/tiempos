@@ -4,13 +4,13 @@ import { RelojArenaComponent } from '../relojes/reloj-arena/reloj-arena.componen
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RelojDigitalComponent } from '../relojes/reloj-digital/reloj-digital.component';
+import { RelojAnalogicoComponent } from "../relojes/reloj-analogico/reloj-analogico.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [TimeComponent, RelojArenaComponent, FormsModule, CommonModule,
-    RelojDigitalComponent
-  ],
+    RelojDigitalComponent, RelojAnalogicoComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
