@@ -1,0 +1,49 @@
+<div class="relojes-solares-container">
+  <!-- Reloj de segundos -->
+  <div class="reloj-solar-autentico">
+    <div class="base-solar">
+      <div
+        class="marca"
+        *ngFor="let i of getMarcas(7); let idx = index"
+        [style.transform]="'rotate(' + (idx * 30) + 'deg)'"
+      >
+        <span>{{ idx * 10 }}</span>
+      </div>
+      <div class="gnomon-fijo"></div>
+      <div class="sombra-gira" [style.transform]="getSombra60(hora.getSeconds())"></div>
+    </div>
+    <span>Segundos</span>
+  </div>
+
+  <!-- Reloj de minutos -->
+  <div class="reloj-solar-autentico">
+    <div class="base-solar">
+      <div
+        class="marca"
+        *ngFor="let i of getMarcas(7); let idx = index"
+        [style.transform]="'rotate(' + (idx * 30) + 'deg)'"
+      >
+        <span>{{ idx * 10 }}</span>
+      </div>
+      <div class="gnomon-fijo"></div>
+      <div class="sombra-gira" [style.transform]="getSombra60(hora.getMinutes())"></div>
+    </div>
+    <span>Minutos</span>
+  </div>
+
+  <!-- Reloj de horas -->
+  <div class="reloj-solar-autentico">
+    <div class="base-solar">
+      <div
+        class="marca"
+        *ngFor="let i of getMarcas(13); let idx = index"
+        [style.transform]="'rotate(' + (idx * 15) + 'deg)'"
+      >
+        <span>{{ idx + 6 }}</span>
+      </div>
+      <div class="gnomon-fijo"></div>
+      <div class="sombra-gira" [style.transform]="getSombraHoras(hora.getHours(), hora.getMinutes())"></div>
+    </div>
+    <span>Horas (6 AM - 6 PM)</span>
+  </div>
+</div>

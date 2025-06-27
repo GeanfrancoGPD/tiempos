@@ -6,12 +6,13 @@ import { CommonModule } from '@angular/common';
 import { RelojDigitalComponent } from '../relojes/reloj-digital/reloj-digital.component';
 import { RelojAnalogicoComponent } from "../relojes/reloj-analogico/reloj-analogico.component";
 import { RelojVelaComponent } from "../relojes/reloj-vela/reloj-vela.component";
+import { RelojSolarComponent } from "../relojes/reloj-solar/reloj-solar.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [TimeComponent, RelojArenaComponent, FormsModule, CommonModule,
-    RelojDigitalComponent, RelojAnalogicoComponent, RelojVelaComponent],
+    RelojDigitalComponent, RelojAnalogicoComponent, RelojVelaComponent, RelojSolarComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

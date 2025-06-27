@@ -32,10 +32,8 @@ export class RelojVelaComponent implements OnChanges {
     this.alturaSegundos = ((60 - s) / 60) * 100;
 
     // Opción 2: descomenta si prefieres que las velas suban con el tiempo
-    console.log('Horas:', this.alturaHoras);
-    console.log('min:', this.alturaMinutos);
-    console.log('seg:', this.alturaSegundos);
-
-    
+    // console.log('Horas:', this.alturaHoras);
+    // console.log('min:', this.alturaMinutos);
+    // console.log('seg:', this.alturaSegundos);
   }
 }
