@@ -7,12 +7,13 @@ import { RelojDigitalComponent } from '../relojes/reloj-digital/reloj-digital.co
 import { RelojAnalogicoComponent } from "../relojes/reloj-analogico/reloj-analogico.component";
 import { RelojVelaComponent } from "../relojes/reloj-vela/reloj-vela.component";
 import { RelojSolarComponent } from "../relojes/reloj-solar/reloj-solar.component";
+import { RelojSistemaSolarComponent } from "../relojes/reloj-sistema-solar/reloj-sistema-solar.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [TimeComponent, RelojArenaComponent, FormsModule, CommonModule,
-    RelojDigitalComponent, RelojAnalogicoComponent, RelojVelaComponent, RelojSolarComponent],
+    RelojDigitalComponent, RelojAnalogicoComponent, RelojVelaComponent, RelojSolarComponent, RelojSistemaSolarComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

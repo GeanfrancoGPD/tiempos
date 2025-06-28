@@ -8,7 +8,11 @@
             <option value="3">Reloj Analogico</option>
             <option value="4">Reloj de velas</option>
             <option value="5">Reloj Solar</option>
-            <option value="6">6</option>
+            <option value="6">Reloj sistema solar</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
             <option></option>
 
         </select>
@@ -21,5 +25,6 @@
     <app-reloj-analogico *ngIf="seleccion === '3'" [hora]="hora"></app-reloj-analogico>
     <app-reloj-vela *ngIf="seleccion === '4'" [hora]="hora"></app-reloj-vela>
     <app-reloj-solar *ngIf="seleccion === '5'" [hora]="hora"></app-reloj-solar>
+    <app-reloj-sistema-solar *ngIf="seleccion === '6'" [hora]="hora"></app-reloj-sistema-solar>
     
 </div>

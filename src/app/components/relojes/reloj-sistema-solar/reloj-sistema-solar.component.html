@@ -1,0 +1,15 @@
+<div class="sistema-solar">
+  <div class="sol"></div>
+
+  <div class="orbita segundos" [style.transform]="getSegRot()">
+    <div class="planeta planeta-segundos">{{ hora.getSeconds() }}</div>
+  </div>
+
+  <div class="orbita minutos" [style.transform]="getMinRot()">
+    <div class="planeta planeta-minutos">{{ hora.getMinutes() }}</div>
+  </div>
+
+  <div class="orbita horas" [style.transform]="getHoraRot()">
+    <div class="planeta planeta-horas">{{ hora.getHours() }}</div>
+  </div>
+</div>
