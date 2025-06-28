@@ -1,30 +1,41 @@
-<p>home works!</p>
-<div class="home-container">
-    <form action="#">
-        <label for="comp">Selecciona un componente</label>
-        <select name="selector" [(ngModel)]="seleccion" id="comp" >
-            <option value="1">Reloj de arena</option>
-            <option value="2">Reloj Digital</option>
-            <option value="3">Reloj Analogico</option>
-            <option value="4">Reloj de velas</option>
-            <option value="5">Reloj Solar</option>
-            <option value="6">Reloj sistema solar</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option></option>
+<div class = "header">
+    Bienvenido 
+</div>
 
-        </select>
+<div class="contenedor-principal">
+  <div class="slider-container">
+    <app-time *ngIf="!manual" (horaActual)="actualizarHora($event)"></app-time>
+
+    <app-slider
+      [horaBase]="hora"
+      (tiempoCambiado)="onTiempoCambiado($event)">
+    </app-slider>
+  </div>
+  
+  <div class="home-container">
+    <form action="#">
+      <label for="comp">Selecciona un componente</label>
+      <select name="selector" [(ngModel)]="seleccion" id="comp">
+        <option value="1">Reloj de arena</option>
+        <option value="2">Reloj Digital</option>
+        <option value="3">Reloj Analógico</option>
+        <option value="4">Reloj de velas</option>
+        <option value="5">Reloj Solar</option>
+        <option value="6">Reloj Sistema Solar</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
     </form>
 
     <app-time (horaActual)="actualizarHora($event)"></app-time>
-    
+
     <app-reloj-arena *ngIf="seleccion === '1'" [hora]="hora"></app-reloj-arena>
     <app-reloj-Digital *ngIf="seleccion === '2'" [hora]="hora"></app-reloj-Digital>
     <app-reloj-analogico *ngIf="seleccion === '3'" [hora]="hora"></app-reloj-analogico>
     <app-reloj-vela *ngIf="seleccion === '4'" [hora]="hora"></app-reloj-vela>
     <app-reloj-solar *ngIf="seleccion === '5'" [hora]="hora"></app-reloj-solar>
     <app-reloj-sistema-solar *ngIf="seleccion === '6'" [hora]="hora"></app-reloj-sistema-solar>
-    
+  </div>
 </div>

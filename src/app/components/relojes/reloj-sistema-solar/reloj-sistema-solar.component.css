@@ -1,14 +1,13 @@
 .sistema-solar {
   position: relative;
-  width: 420px;
-  height: 420px;
+  width: 320px;
+  height: 320px;
   margin: auto;
   background: radial-gradient(circle, #0a0a0a, #000000);
   border-radius: 50%;
   overflow: hidden;
 }
 
-/* ☀️ Sol */
 .sol {
   position: absolute;
   width: 50px;
@@ -40,18 +39,18 @@
 }
 
 .orbita.segundos::before {
-  width: 130px;
-  height: 130px;
+  width: 100px;
+  height: 100px;
 }
 
 .orbita.minutos::before {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 
 .orbita.horas::before {
-  width: 280px;
-  height: 280px;
+  width: 220px;
+  height: 220px;
 }
 
 /* Planetas */
@@ -74,7 +73,7 @@
   height: 16px;
   font-size: 10px;
   background: #00bfff;
-  transform: rotate(0deg) translateX(65px);
+  transform: rotate(0deg) translateX(40px);
   z-index: 5;
   border-radius: 50%;
   box-shadow:0 0 15px 5px #00bfff;
@@ -82,11 +81,11 @@
 }
 
 .planeta-minutos {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   font-size: 11px;
   background: #00ff99;
-  transform: rotate(0deg) translateX(100px);
+  transform: rotate(0deg) translateX(65px);
   z-index: 6;
   border-radius: 50%;
   box-shadow:0 0 15px 5px #00ff99;
@@ -97,7 +96,7 @@
   height: 32px;
   font-size: 12px;
   background: rgb(221, 70, 6);
-  transform: rotate(0deg) translateX(140px);
+  transform: rotate(0deg) translateX(90px);
   z-index: 7;
   border-radius: 50%;
   box-shadow:0 0 15px 5px rgb(221, 70, 6);

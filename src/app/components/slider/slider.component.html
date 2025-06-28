@@ -1,0 +1,16 @@
+<div class="slider-container">
+  <button (click)="toggleModoManual()">
+    {{ modoManual ? 'Volver al tiempo real' : 'Editar hora manualmente' }}
+  </button>
+
+  <div *ngIf="modoManual">
+    <label>Horas: {{ horas }}</label>
+    <input type="range" min="0" max="23" [(ngModel)]="horas" (input)="emitirCambio()" />
+
+    <label>Minutos: {{ minutos }}</label>
+    <input type="range" min="0" max="59" [(ngModel)]="minutos" (input)="emitirCambio()" />
+
+    <label>Segundos: {{ segundos }}</label>
+    <input type="range" min="0" max="59" [(ngModel)]="segundos" (input)="emitirCambio()" />
+  </div>
+</div>

@@ -1,6 +1,17 @@
+.contenedor-principal {
+  margin-top: 16vh;
+  display: flex;
+  justify-content: center;
+  gap: 2rem; 
+  padding: 2rem;
+  flex-wrap: wrap; 
+}
+
 .home-container {
+  position: relative;
+  margin-top: 40%;
   max-width: 600px;
-  margin: 80px auto;
+  margin: 0 auto;
   padding: 1.5rem;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -32,4 +43,33 @@ select:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
   outline: none;
+}
+
+p {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 auto;
+  width: max-content;
+}
+.slider-container {
+  position: relative;
+  max-width: 250px;
+  height: 200px;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.header{
+  position: absolute;
+  top: 0%;
+  height: 8vh;
+  width: 99%;
+  display: flex;
+  font-size: 3rem;
+  font-family: 'roboto';
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
 }

@@ -8,20 +8,28 @@ import { RelojAnalogicoComponent } from "../relojes/reloj-analogico/reloj-analog
 import { RelojVelaComponent } from "../relojes/reloj-vela/reloj-vela.component";
 import { RelojSolarComponent } from "../relojes/reloj-solar/reloj-solar.component";
 import { RelojSistemaSolarComponent } from "../relojes/reloj-sistema-solar/reloj-sistema-solar.component";
+import { SliderComponent } from "../slider/slider.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [TimeComponent, RelojArenaComponent, FormsModule, CommonModule,
-    RelojDigitalComponent, RelojAnalogicoComponent, RelojVelaComponent, RelojSolarComponent, RelojSistemaSolarComponent],
+    RelojDigitalComponent, RelojAnalogicoComponent, RelojVelaComponent, RelojSolarComponent, 
+    RelojSistemaSolarComponent, SliderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
   hora: Date = new Date();
   seleccion = '1';
+  manual = false;
 
   actualizarHora(horaRecibida: Date) {
     this.hora = horaRecibida;
+  }
+
+  onTiempoCambiado(horaManual: Date) {
+    this.manual = true;
+    this.hora = horaManual;
   }
 }
